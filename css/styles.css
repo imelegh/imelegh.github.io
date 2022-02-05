@@ -1,385 +1,122 @@
+@import "./utilities.css";
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;600;700;800&display=swap");
 
-@import './utilities.css';
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
-:root{
-    --primary: #33b1b1;
-    --secondary: #006364;
-    --dark: #161616;
-    --pure: #ffffff;
-    --light: #f2f2f2;
-    --ternary: #585858;
-    
-
+:root {
+  --primary: #33b1b1;
+  --secondary: #006364;
+  --dark: #161616;
+  --pure: #ffffff;
+  --light: #f2f2f2;
+  --ternary: #585858;
 }
 
-body{
-    font-family: 'Open Sans', sans-serif;
-    
-}
+body {
+  font-family: "Open Sans", sans-serif;
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-   /* -webkit-font-smoothing: antialiased; */
-
-}
-
-header{
-    background: var(--dark);
-    height: 900px;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 90%, 0 100%);
-   
-}
-
-.container {
-    
-    max-width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
-header nav .left a{
-    color: var(--pure);
-    font-size: 1.2rem;
-    text-decoration: none;
-    margin-right: 3rem;
-    text-transform: uppercase;
-    transition: all .3s ease;
-}
-
-header nav .left a:hover{
-    color: var(--primary)
-    
-}
-
-header nav{
-    padding: 1rem 0;
-}
-
-header nav .branding {
-    margin-right: 3rem;
-}
-
-.hero{
-    padding: 0 0;
-
-}
-
-.hero .left{
-    
-}
-
-.hero .left img{
-    width: 350px;
-    /* border-radius: 50%; */
-  clip-path: polygon(2% 85%, 13% 95%, 30% 97%, 49% 98%, 63% 98%, 73% 96%, 81% 95%, 88% 92%, 96% 84%, 100% 70%, 100% 51%, 89% 5%, 59% 1%, 26% 1%, 0% 24%);
-
-}
-
-.hero .right{
-    color: var(--pure);
-    margin-top: 3rem;
-   
-
-}
-
-.hero .right h1{
-    font-size: 3rem;
-    font-weight: 600;
-    letter-spacing: 0.2rem;
-    line-height: 1.2;
-    margin: 1rem, 0 2rem 0 ;
-}
-
-.hero .right h2{
-    font-size: 2rem;
-    color: var(--primary);
-    margin: 1rem 0 0 0;
-    font-weight: 100;
-   
-}
-
-.hero .right h3{
-    font-size: 1.5rem;
-    color: var(--primary);
-    margin: 1rem 0 0 0;
-    font-weight: 100;
-   
-}
-
-
-.hero .right  p{
-    line-height: 1.5;
-    margin: 2rem 2rem 2rem 0;
-    text-align: justify;
-    font-size: 1.1rem;
-    padding: 2rem 0;
-}
-
-
-/* --------------About Me Section ----------------- */
-section{
-    padding: 6rem 0;
-
-     
-}
-section.about{
-    height: 800px;
-    margin-top: 10rem;
-
-}
-    
-
-section.about .about-me-img{
-    height: 400px;
-}
-section.about h2{
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    font-weight: 600;
-
-}
-section.about h2 span{
-    color:  var(--secondary)
-}
-
-
-
-section.about p{
-    color: var(--dark);
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-bottom: 2rem;
-    text-align: justify;
-}
-
-section.about .social{
-    display: flex;
-    margin-top: 5rem;
-}
-
-section.about .social a{
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 0.6rem;
-    transition: all .3s ease;
-
-}
-section.about .social a img{
-   
-    padding: 0.5rem;
-    border-radius: 50%;
-    
-    
-}
-section.about .social a:hover{
-    background: var(--primary);
-}
-
-
-
-.section-heading{
-    color: var(--light);
-    text-align: center;
-    margin: 2rem;
-    line-height: 0.5rem;
-    font-size: 2rem;
-   
-
-}
-
-.section-heading span{
-    color: var(--primary)
-}
-.section-heading + p{
-    color: var(--light);
-    margin: 3rem 0 2rem 0;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 100;
-
-}
-
-  /* --------------Works Section--------------------*/
-
-section.work{
-    background: var(--dark);
-    height: 900px;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 90%, 0 100%);
-
-}
-section.work .card-wrapper{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 2rem;
-}
-
-section.work .card-wrapper .card{
-    position: relative;
-    height: 200px;
-    width: 300px;
-}
-section.work .card-wrapper .card .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(49, 177, 177, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: var(--light);
-    opacity: 0;
-    transition: all .3s ease;
-
-}
-
-section.work .card-wrapper .card:hover .overlay{
-opacity: 1;
-    
-}
-
-section.work .card-wrapper .card .overlay a{
-    color: var(--dark);
-    text-decoration: none;
-
-}
-
-section.work .card-wrapper .card img{
-    height: 100%;
-    width: 100%;
-
-}
-/* ------------Contact Me-------------------------- */
-
-section.contact-me{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
   
 }
-.contact-container{
-    background-color: var(--dark);
-    width: 50%;
-    padding: 20px;
-    border-radius: 10px;
-   
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+ 
 }
-.contact-container h2{
-    width: 100%;
-    color: var(--light);
-    font-size: 2rem;
-    text-align: center;
-    margin: 2rem 0;
+
+header {
+  background-color: var(--dark);
 
 }
 
-.contact-container h2 span{
-    color:  var(--primary);
+nav {
+  justify-content: flex-start;
+  position: fixed;
+  z-index: 999;
+  background-color: var(--dark);
+  width: 100%;
 }
 
-.contact-container .row100{
-    position: relative;
-    width: 100%;
+.logo {
+  width: 100px;
+  margin-right: 100px;
+}
+
+.menu {
+}
+
+.menu a {
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--light);
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--primary);
+}
+
+.contact-btn {
+  align-self: flex-end;
+  margin-right: 20px;
+}
+
+/* .intro{
+    grid-area: intro;
+}
+
+.about{
+    grid-area: about;
+}
+
+.projects{
+    grid-area: projects;
+}
+
+.contact{
+    grid-area: contact-me;
+} */
+
+/* .container{
     display: grid;
-    grid-template-columns: repeat(autofit, minmax(300px,1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "intro intro"
+    "about about"
+    "projects projects"
+    "contact contact";
+} */
 
-}
-
-.contact-container .row100 .col{
-    position: relative;
-    width: 100%;
-    padding: 0 10px;
-    margin: 30px 0 10px;
-    transition: 0.5s;
-}
-
-.contact-container .row100 .inputBox{
-    position: relative;
-    width: 100%;
-    height: 40px;
-    color: var(--primary);
-}
-
-.contact-container .row100 .inputBox input,
-.contact-container .row100 .inputBox.textarea textarea{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    box-shadow: none;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    padding: 0 10px;
-    z-index: 1;
-    color: #000000;
-
-}
-.contact-container .row100 .inputBox .text{
-    position: absolute;
-    top: 0;
-    left: 0;
-    line-height: 40px;
-    font-size: 18px;
-    padding: 0 10px;
-    display: block;
-    transition: 0.5s;
-    pointer-events: none;
-    
-}
-
-.contact-container .row100 .inputBox input:focus + .text,
-.contact-container .row100 .inputBox input:valid + .text{
-    top: -35px;
-    left: -10px;
-}
-
-.contact-container .row100 .inputBox .line{
-    position: absolute;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: var(--primary);
-    transition: 0.5s;
-    border-radius: 2px;
-    pointer-events: none;
-}
-
-.contact-container .row100 .inputBox input:focus ~ .line,
-.contact-container .row100 .inputBox input:valid ~ .line{
-    height: 100%;
-}
-
-.contact-container .row100 .inputBox.textarea{
-    position: relative;
-    width: 100%;
-    height: 100px;
-    padding: 10px 0;
-
-}
-.contact-container .row100 .inputBox.textarea textarea{
-    height: 100%;
-    resize: none;
-}
-
-.contact-container .row100 .inputBox textarea:focus + .text,
-.contact-container .row100 .inputBox textarea:valid + .text{
-    top: -35px;
-    left: -10px;
-}
-.contact-container .row100 .inputBox textarea:focus ~ .line,
-.contact-container .row100 .inputBox textarea:valid ~ .line{
-    height: 100%;
+.article{
+    padding: 30px 0;
 }
 
 
+.intro img {
+  width: 350px;
+  clip-path: polygon(
+    2% 85%,
+    13% 95%,
+    30% 97%,
+    49% 98%,
+    63% 98%,
+    73% 96%,
+    81% 95%,
+    88% 92%,
+    96% 84%,
+    100% 70%,
+    100% 51%,
+    89% 5%,
+    59% 1%,
+    26% 1%,
+    0% 24%
+  );
+}
+
+
+article.intro section{
+ flex: 1;
+}

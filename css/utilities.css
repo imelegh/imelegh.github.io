@@ -1,12 +1,17 @@
-.flex{
+.show{
+    outline: 1px solid red;
+}
+
+.flex-wrap{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .items-center{
     align-items: center;
 }
 
-.justify-between{
+.space-between{
     justify-content: space-between;
 }
 
@@ -44,15 +49,3 @@ transition: all .3s ease;
     color: var(--dark)
 
 }
-
-.flex-1{
-    flex: 1;
-}
-
-.justify-center{
-    justify-content: center;
-}
-
-
-
-
