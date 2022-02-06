@@ -5,6 +5,7 @@
 .flex-wrap{
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .items-center{
@@ -15,9 +16,13 @@
     justify-content: space-between;
 }
 
+.justify-center{
+    justify-content: center;
+}
+
 .btn{
     padding: 0.8rem 3rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     border: 2px solid transparent;
     outline: none;
@@ -49,3 +54,7 @@ transition: all .3s ease;
     color: var(--dark)
 
 }
+.flex-1{
+    flex: 1;
+}
+

@@ -11,13 +11,14 @@
 </head>
 
 <body>
+<div class="container">
 <header>
     <nav class="flex-wrap items-center space-between">
         <div class="left flex-wrap">
             <div class="logo">
                 <img src="./images/DevIstvanLogo.png" alt="logo dev istvan">
             </div>
-            <div class="menu flex-wrap items-center" >
+            <div class="menu flex-wrap items-center space-between flex-1" >
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#projects">Projects</a>
@@ -25,20 +26,19 @@
             </div>
         </div>
         <div class="right">
-            <button class="contact-btn btn btn-primary" onclick="window.location.href = '#contact-me';" class="btn btn-primary">Contact</button>
+            <button class="contact-btn btn btn-primary" onclick="window.location.href = '#contact-me';">Contact</button>
         </div>
-        </div>
-
     </nav>
 </header>
-<div class="container">
+
+
 <!-- ___________Introduction_________ -->
 
 <article id="home" class="intro flex-wrap items-center space-between">
-    <section class="me">
-        <img src="./images/miz2022_6.png" alt="a foto about Istvan">
-    </section>
-    <section class="intro-text">
+    <div class="left flex-1">
+        <img class="me" src="./images/miz2022_6.png" alt="a foto about Istvan">
+    </div>
+    <div class="intro-text flex-1">
         <h2>Istvan Zoltan Melegh</h2>
         <h1>Web Developer</h1>
         <h3>Frankfurt am Main, Germany</h3>
@@ -50,16 +50,16 @@
         <div>
             <button class="btn btn-secondary">DOWNLOAD CV</button>
         </div>
-    </section>
+    </div>
 </article>
 
 <!-- ___________About_________ -->
 
-<article id="about" class="about flex-wrap">
-    <section>
-        <img src="./images/me4.png" alt="another foto about Istvan">
-    </section>
-    <section>
+<article id="about" class="about flex-wrap items-center justify-center">
+    <div class="left flex-1">
+        <img class="me2" src="./images/me4.png" alt="another foto about Istvan">
+    </div>
+    <div class="about-text flex-1">
         <h2>About <span>Me</span></h2>
     
         <p>I'm taking a part in the digitalization in Germany, therefore I
@@ -85,43 +85,73 @@
             <a href="https://www.instagram.com/istvanmelegh/" target="_blank" rel="noopener noreferrer"><img
                     src="./images/social_icons/social-1_square-instagram.svg" alt="instagram icon"></a>
         </div>
-    </section>
+    </div>
 </article>
 
 <!-- ___________Projects_________ -->
 
-<article id="projects" class="projects">
-    <img src="./images/pic1.png" alt="Projekt1">
-    <img src="./images/pic2.png" alt="Projekt2">
-    <img src="./images/pic3.png" alt="Projekt3">
-    <img src="./images/pic4.png" alt="Projekt4">
-    <img src="./images/pic5.png" alt="Projekt5">
-    <img src="./images/pic6.png" alt="Projekt6">
+<article id="projects" class="projects ">
 
+    <h2>Projects</h2>
+<div class="project-foto flex-wrap items-center justify-center"> 
+    <a href="#projects"><img src="./images/pic1.png" alt="Projekt1"></a>
+    <a href="#projects"><img src="./images/pic2.png" alt="Projekt2"></a>
+    <a href="#projects"><img src="./images/pic3.png" alt="Projekt3"></a>
+    <a href="#projects"><img src="./images/pic4.png" alt="Projekt4"></a>
+    <a href="#projects"><img src="./images/pic5.png" alt="Projekt5"></a>
+    <a href="#projects"><img src="./images/pic6.png" alt="Projekt6"></a>
+</div>
 </article>
 
 <!-- ___________Contact-me_________ -->
 
-<article id="contact-me" class="contact">
-
-    <h2>Contact <span>Me</span></h2>
-
+<article id="contact-me" >
     <form action="https://formspree.io/f/xqknpbny" method="post">
+ 
+        <h2>Contact <span>Me</span></h2>
+   
+        <div class="input-container">
         
-        <label for="f-name">First Name</label>
-            <input type="text" name="First Name" id="f-name" required="required">          
-       
-        <label for="l-name">Last Name</label>
-            <input type="text" name="Last Name" required="required">
-        
-        <label for="email">E-mail</label>
-            <input type="email" name="Email" id="email" required="required">
-        <label for="message">Message</label>
-            <textarea required="required" name="Message" id="message"></textarea>
+            <div class="styled-input wide">
+                <input type="text" required id="your_name" name="your_name"/>
+                <label for="your_name">Name</label>
+            </div>
+
+            <div class="styled-input">
+                <input type="email" required  id="email" name="name" />
+                <label for="email">Email</label>
+            </div>
+
+
+            <div class="styled-input" style=float:right;>
+                <input type="text"  required  id="phone" name="name"/>
+                <label for="phone">Phone Number</label>
+            </div>
+
+            <div class="styled-input wide">
+                <textarea  required  ></textarea>
+                <label>Message</label>
+            </div>
+            <div class="send">
+                <button class=" btn btn-primary" type="submit">Send</button>
+            </div>
+        </div>
     </form>
+
 </article>
+
+<footer>
+
+<div class="footer flex-wrap items-center">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="https://meinedigitalewelt.de/" target="_blank" rel="noopener noreferrer">Blog</a>
 </div>
 
-<footer></footer>
+
+</footer>
+
+</div>
 </body>
 </html>

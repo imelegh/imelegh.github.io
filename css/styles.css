@@ -10,48 +10,70 @@
   --ternary: #585858;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-
-  
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
- 
+  
 }
+
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  
+}
+
+.container{
+max-width: 1200px;
+background-color: var(--light);
+margin: auto;
+}
+ 
+  
+  
+
+
+
+ 
+
+
+/* ________________Header_________________ */
 
 header {
   background-color: var(--dark);
+ 
+
 
 }
 
+/* ________________Menü_________________ */
+
 nav {
-  justify-content: flex-start;
-  position: fixed;
+ 
   z-index: 999;
   background-color: var(--dark);
-  width: 100%;
+  min-width: 100%;
+ 
 }
 
 .logo {
   width: 100px;
-  margin-right: 100px;
+  margin: 5px 100px 5px 15px;
+  align-self: flex-start;
+ 
 }
 
-.menu {
-}
 
 .menu a {
   padding: 10px;
-  font-size: 20px;
+  font-size: 1.4rem;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 400;
   color: var(--light);
   transition: all 0.3s ease;
+  margin: 0 10px;
 }
 
 .menu a:hover {
@@ -59,43 +81,41 @@ nav {
 }
 
 .contact-btn {
-  align-self: flex-end;
-  margin-right: 20px;
-}
-
-/* .intro{
-    grid-area: intro;
-}
-
-.about{
-    grid-area: about;
-}
-
-.projects{
-    grid-area: projects;
-}
-
-.contact{
-    grid-area: contact-me;
-} */
-
-/* .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "intro intro"
-    "about about"
-    "projects projects"
-    "contact contact";
-} */
-
-.article{
-    padding: 30px 0;
+  
+  margin-right: 50px;
 }
 
 
-.intro img {
+
+
+
+/* ________________Introduction + About _________________ */
+
+h1 {
+  color: var(--light);
+  font-size: 2.5rem;
+  margin: 1rem 0;
+
+}
+
+h2{
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+h3{
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.left{
+ text-align: center;
+}
+
+
+.me {
   width: 350px;
   clip-path: polygon(
     2% 85%,
@@ -114,9 +134,257 @@ nav {
     26% 1%,
     0% 24%
   );
+   margin-left: 2rem;
+
+}
+
+.me2{
+  width: 350px;
+  margin-left: 2rem;
+ 
 }
 
 
-article.intro section{
- flex: 1;
+
+/* ________________Introduction_________________ */
+
+.intro{
+  padding: 5rem 0;
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 1.2rem;
+}
+
+.intro-text{
+  line-height: 2rem;
+  font-weight: 100;
+   margin: 2rem 2rem 2rem 8rem;
+  
+}
+
+.intro-text p{
+  margin: 2rem 6rem 2rem 0;
+  text-align: justify;
+}
+
+/* ________________About_________________ */
+
+
+.about{
+  padding: 10rem 0;
+  background-color: var(--light);
+  color: var(--dark);
+  font-size: 1.2rem;
+}
+
+.about-text{
+  line-height: 2rem;
+  font-weight: 100;
+  margin: 2rem 2rem 2rem 8rem;
+  
+}
+
+.about-text p{
+  margin: 2rem 6rem 2rem 0;
+  text-align: justify;
+}
+.about-text h2{
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.about-text h2 span{
+  color: var(--secondary);
+}
+
+.about .social{
+    display: flex;
+    
+}
+
+.about .social a{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    transition: all .3s ease;
+
+}
+.about .social a img{
+   
+    
+    border-radius: 50%;
+    
+    
+}
+.about .social a:hover{
+    background: var(--primary);
+}
+
+/* ________________Projects_________________ */
+
+.projects{
+  padding: 4rem 0;
+  background-color: var(--secondary);
+  color: var(--dark);
+  font-size: 1.2rem;
+}
+
+.projects {
+  line-height: 2rem;
+  font-weight: 100;
+  
+}
+
+
+
+.projects h2{
+  color: var(--light);
+  font-weight: 700;
+  margin: 3rem 0;
+  text-align: center;
+  
+}
+
+.projects h2 span{
+  color: var(--primary);
+}
+
+
+.project-foto img{
+  margin: 10px;
+  box-shadow: 5px 5px 10px var(--dark);
+
+}
+
+.project-foto img a{
+  cursor: pointer;
+}
+
+
+/* ________________Contact-me_________________ */
+
+form h2{
+  
+ color: var(--dark);
+  font-weight: 700;
+  text-align: center;
+  margin: 6rem 0 3rem 0;
+}
+
+form h2 span{
+  color: var(--secondary);
+}
+
+
+h4 {
+
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--ternary);
+    line-height: 1.5;
+}
+
+/* ///// inputs /////*/
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 1rem;
+    color: var(--primary);
+    top: -5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.styled-input {
+    float: left;
+    width: 300px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 800px){
+    .styled-input {
+        width:100%;
+    }
+}
+
+.styled-input label {
+    color: var(--light);
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide { 
+    width: 650px;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    padding: 30px;
+    border: 0;
+    width: 100%;
+    font-size: 1.3rem;
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 4px;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.input-container {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+}
+
+.send{
+  text-align: end;
+}
+
+/* ________________Footer_________________ */
+
+footer{
+  background-color: var(--ternary);
+  min-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+footer a {
+  padding: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--light);
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--primary);
 }
