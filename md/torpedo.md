@@ -85,13 +85,6 @@ A játék során az y koordinátát betűvel helyettesítjük: A - J (könyvtár
 
 **Ha véletlenszerűen kiválasztunk egy mezőt és egy lépést jobbra haladunk (y+1), akkor a szám eggyel nő, ha balra lépünk, akkor (y-1) eggyel csökken. Ha előrelépünk (x+1) a szám 10-zel nő, ha "hátra" (x-1), akkor 10-zel csökken.**
 
-Tehát
-- előre:    mező + 10
-- hátra:    mező - 10
-- jobbra:   mező + 1
-- balra:    mező - 1
-
-**A csatamező széle**
 
 - előre :  mezo_szama + 10   x + 1
 - hátra:   mezo_szama - 10   x - 1
@@ -100,7 +93,7 @@ Tehát
 
 Lehetne ekkor forgolódni, hogy másfelé van - e elég hely, vagy a véletleszám generátorhoz visszairányítani a programot, teljesen újrakezdeni az egészet.
 
-**Feltérképezés: szélsőértékek**
+** A csatamező széle - Feltérképezés: szélsőértékek**
 
 - előre: 10 - mezo_szama // 10 + hajó értéke   ha < 0 akkor nincs elég hely
 - hátra: mezo_szama // 10 - hajó értéke   ha  < 0 akkor nincs elég hely
